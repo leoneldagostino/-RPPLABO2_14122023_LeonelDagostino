@@ -64,7 +64,22 @@ namespace View
 
         private void cmbTipoLibro_SelectedIndexChanged(object sender, EventArgs e)
         {
-            tipoSeleccionado = (ETipoDeLibro)cmbTipoLibro.SelectedItem;
+            
+            if(cmbTipoLibro.SelectedIndex == 0) 
+            {
+                tipoSeleccionado = ETipoDeLibro.Ciencia_Ficcion;
+                
+            }
+            else if (cmbTipoLibro.SelectedIndex == 1) 
+            { 
+                
+                tipoSeleccionado = ETipoDeLibro.Historietas;
+            }
+            else
+            {
+                tipoSeleccionado = ETipoDeLibro.Misterio;
+
+            }
             
         }
     }
